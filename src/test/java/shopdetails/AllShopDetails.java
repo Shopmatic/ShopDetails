@@ -49,7 +49,7 @@ public class AllShopDetails {
 		String user_dir = System.getProperty("user.dir");
 		System.out.println(user_dir);
 		System.setProperty("webdriver.chrome.driver", "./src/test/chromedriver");
-		driver = new ChromeDriver();
+		//driver = new ChromeDriver();
 	}
 	
 	@Test
