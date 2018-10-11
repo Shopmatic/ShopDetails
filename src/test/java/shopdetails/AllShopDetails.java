@@ -46,7 +46,7 @@ public class AllShopDetails {
 		Properties p=new Properties();
 		p.load(reader);
 		input = p.getProperty("input");
-		System.setProperty("webdriver.chrome.driver", "/Users/swetha/Documents/softwares/automation drivers/chromedriver");
+		System.setProperty("webdriver.chrome.driver", "./src/test/chromedriver");
 		driver = new ChromeDriver();
 	}
 	
