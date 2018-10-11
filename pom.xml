@@ -4,10 +4,11 @@
   <artifactId>Test</artifactId>
   <version>0.0.1-SNAPSHOT</version>
  <dependencies>
-   <dependency>
+ <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-chrome-driver -->
+<dependency>
     <groupId>org.seleniumhq.selenium</groupId>
-    <artifactId>selenium-server-standalone</artifactId>
-    <version>2.48.2</version>
+    <artifactId>selenium-chrome-driver</artifactId>
+    <version>3.14.0</version>
 </dependency>
   <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 <dependency>
