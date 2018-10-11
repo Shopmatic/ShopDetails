@@ -48,7 +48,7 @@ public class AllShopDetails {
 		input = p.getProperty("input");
 		String user_dir = System.getProperty("user.dir");
 		System.out.println(user_dir);
-		System.setProperty("webdriver.chrome.driver", "./src/test/chromedriver");
+		System.setProperty("webdriver.chrome.driver", "./src/test/resources/chromedriver");
 		driver = new ChromeDriver();
 	}
 	
