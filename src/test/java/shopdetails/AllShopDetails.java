@@ -52,7 +52,7 @@ public class AllShopDetails {
 		input = p.getProperty("input");
 		 ChromeOptions chromeOptions = new ChromeOptions();
 		chromeOptions.addArguments("--headless");
-		System.setProperty("webdriver.chrome.driver", "/Users/swetha/Documents/softwares/automation drivers/chromedriver");
+		System.setProperty("webdriver.chrome.driver", "./src/test/chromedriver");
 		driver = new ChromeDriver(chromeOptions);
 	}
 	
