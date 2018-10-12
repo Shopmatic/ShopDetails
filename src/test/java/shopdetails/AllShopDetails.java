@@ -17,9 +17,13 @@ import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -46,10 +50,10 @@ public class AllShopDetails {
 		Properties p=new Properties();
 		p.load(reader);
 		input = p.getProperty("input");
-		String user_dir = System.getProperty("user.dir");
-		System.out.println(user_dir);
-		System.setProperty("webdriver.chrome.driver", "./src/test/resources/chromedriver");
-		driver = new ChromeDriver();
+		 ChromeOptions chromeOptions = new ChromeOptions();
+		chromeOptions.addArguments("--headless");
+		System.setProperty("webdriver.chrome.driver", "/Users/swetha/Documents/softwares/automation drivers/chromedriver");
+		driver = new ChromeDriver(chromeOptions);
 	}
 	
 	@Test
@@ -58,10 +62,15 @@ public class AllShopDetails {
 		
 		driver.navigate().to("https://google.com");
 		driver.findElement(By.xpath("//input[@title='Search']")).sendKeys(input);
-		
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//input[@title='Search']")).sendKeys(Keys.TAB);
 		driver.findElement(By.xpath("//input[@name='btnK']")).click();
 		Thread.sleep(2000);
-		driver.findElement(By.xpath("//span[text()='More places']")).click();
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("window.scrollBy(0,250)", "");
+		Thread.sleep(2000);
+		//driver.findElement(By.xpath("//span[text()='More places']")).click();
+		driver.findElement(By.xpath("//div[@class='Mpn0ac']/img")).click();
 		Thread.sleep(2000);
 		
 		Workbook workbook = new XSSFWorkbook();
