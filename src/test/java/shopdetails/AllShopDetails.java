@@ -53,6 +53,7 @@ public class AllShopDetails {
 		 ChromeOptions chromeOptions = new ChromeOptions();
 		chromeOptions.addArguments("--headless");
 		chromeOptions.addArguments("--disable-gpu");
+		chromeOptions.addArguments("--disable-dev-shm-usage");
 		System.setProperty("webdriver.chrome.driver", "./src/test/resources/chromedriver");
 		driver = new ChromeDriver(chromeOptions);
 	}
