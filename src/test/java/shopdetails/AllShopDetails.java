@@ -54,6 +54,11 @@ public class AllShopDetails {
 		chromeOptions.addArguments("--headless");
 		chromeOptions.addArguments("--disable-gpu");
 		chromeOptions.addArguments("--disable-dev-shm-usage");
+		chromeOptions.addArguments("--disable-extensions");
+		chromeOptions.addArguments("start-maximized");
+		chromeOptions.addArguments("disable-infobars");
+		chromeOptions.addArguments("--no-sandbox");
+		//chromeOptions.addArguments("");
 		System.setProperty("webdriver.chrome.driver", "./src/test/resources/chromedriver");
 		driver = new ChromeDriver(chromeOptions);
 	}
