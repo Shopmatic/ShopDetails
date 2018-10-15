@@ -51,7 +51,7 @@ public class AllShopDetails {
 		p.load(reader);
 		input = p.getProperty("input");
 		 ChromeOptions chromeOptions = new ChromeOptions();
-		//chromeOptions.addArguments("--headless");
+		chromeOptions.addArguments("--headless");
 		chromeOptions.addArguments("--disable-gpu");
 		chromeOptions.addArguments("--disable-dev-shm-usage");
 		chromeOptions.addArguments("--disable-extensions");
