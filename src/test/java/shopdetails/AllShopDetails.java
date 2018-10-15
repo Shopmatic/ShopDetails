@@ -59,7 +59,7 @@ public class AllShopDetails {
 		chromeOptions.addArguments("disable-infobars");
 		chromeOptions.addArguments("--no-sandbox");
 		//chromeOptions.addArguments("");
-		System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+		System.setProperty("webdriver.chrome.driver", "./src/test/resources/chromedriver");
 		driver = new ChromeDriver(chromeOptions);
 	}
 	
